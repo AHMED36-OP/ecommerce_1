@@ -1,0 +1,79 @@
+$main-color:#0aad0a;
+$light-color:#f0f3f2;
+$shadow:rgba(145,158,171,0.2) 0px 2px 4px -1px,
+rgba(145,158,171,0.14) 0px 4px 5px 0px,
+rgba(145,158,171,0.12) 0px 1px 10px 0px;
+$traing-color:#ffc908;
+$main-transation:.8s;
+.starr{
+  color: #ffc908;
+}
+.main-button{
+  background-color:#0aad0a;
+  color: #fff;
+  padding: 5px 8px ;
+  border-radius: 5px;
+  border: unset;
+  cursor: pointer;
+  &:disabled{
+    background-color: #0aad0a69;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
+}
+.main-button:hover{
+  background-color:#fff;
+  color: #0aad0a;
+  border: 1px solid #0aad0a;
+
+}
+.active-link{
+  background-color: #0aad0a !important;
+  color: #ffff io !important;
+  border-radius: 5px;
+}
+.txt-main{
+  color: #0aad0a;
+}
+.bg-main-light{
+  background-color: $light-color ;
+}
+.fon-sm{
+  font-size: 12px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.nav-link{
+  transition: unset !important;
+}
+
+.proudect{
+  border-radius: 5px;
+  border: 1px solid #0aad0a;
+  transition: box-shadow .5s;;
+  overflow: hidden;
+}
+.proudect:hover{
+  box-shadow: 0 0 10px #11db1168;
+  cursor: pointer;
+}
+.proudect .main-button{
+  transform: translateY(150%);
+  transition: 2s all;
+  transition: .5s transform;
+}
+.proudect:hover .main-button{
+  transform: translateY(0%);
+}
+.btncart:hover{
+  background-color: #0aad0a;
+  color: #fff;
+}

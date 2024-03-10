@@ -1,0 +1,26 @@
+<section class="my-4">
+  <h2 class="text-center">Populer Proudcts</h2>
+  <input type="search" class="form-control w-75 mx-auto my-3 border-2"
+  placeholder="search..."
+  [(ngModel)]="seacrh_text">
+  <div class="row g-3">
+    <div class="col-md-2" *ngFor="let item of proudects| searchproudect:seacrh_text " >
+      <div class="proudect " >
+        <div class="p-2 cursor-pointer" [routerLink]="['/detials' , item._id]">
+          <img [src]="item.imageCover" class="w-100" [alt]="item.title">
+          <h3 class="h5">{{item.category.name | uppercase}}</h3>
+          <h3 class="h6">{{item.title.split(' ').slice(0,2).join(' ')}}</h3>
+          <div class="d-flex justify-content-between align-items-center">
+            <span>{{item.price |currency:"EGP"}}</span>
+            <div>
+              <i class="fa fa-star starr"></i>
+              <span class="text-muted">{{item.ratingsAverage}}</span>
+            </div>
+          </div>
+        </div>
+        <button (click)="addtocart(item._id)" class="main-button w-100 mt-1 addpro" >Add Proudect</button>
+      </div>
+    </div>
+
+  </div>
+</section>
